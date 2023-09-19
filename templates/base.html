@@ -1,0 +1,20 @@
+{% load static %}
+{% include "parts/footer.html" %}
+{% comment %} to be able to use the static files after u load then u can not load them immediately
+u shold use the static tag again and write the path in {% endcomment %}
+<link rel='stylesheet' href='{% static "css/style.css" %}'>
+
+
+
+
+{% comment %} To include the block tag and show the html content and the bloc tag must be the same name in the main file{% endcomment %}
+{% block content %}
+{% endblock content %}
+
+{% comment %} To include the block tag and show the html content and the bloc tag must be the same name in the main file{% endcomment %}
+{% block aboutusPage %}
+{% endblock aboutusPage %}
+
+{% comment %} To show the navigation bar in all pages that inherites this style 
+and by choosign where to write will affects how and where to show in the real page {% endcomment %}
+{% include "parts/bottombar.html" %}

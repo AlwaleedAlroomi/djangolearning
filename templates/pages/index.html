@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% comment %} before u use any static file u must use load tag to be able to use it {% endcomment %}
+{% load static %}
+
+{% comment %} block tag to show html content abter inherite and using any tag {% endcomment %}
+{% block content %}  
+{% comment %} to show an img in the page use <img> and in src use static tag with the path to img {% endcomment %}
+
+<h1>hi</h1>
+<h4>{{name|capfirst}}</h4>
+<h2>{{age|default:"98"}}</h2>   
+</br>
+<img src='{% static "image/sao.jfif" %}' alt='sword art online poster'>  
+{% comment %} if and for tags are tge same noting new {% endcomment %}
+{% if name == 'abd' %}
+    <p>
+        noor
+    </p>
+
+    
+    {% elif name == 'ado'%}
+        <p>
+            It's elif rule
+        </p>
+
+    {% else %}
+    <p>
+        not found
+    </p>
+{% endif %}
+
+{% for letters in name %}
+<p>
+    {{letters}}
+</p>
+{% endfor %}
+{% endblock content %}
+
