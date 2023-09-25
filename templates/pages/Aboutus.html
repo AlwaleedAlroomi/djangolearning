@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 
 {% block aboutusPage %}
-<h1>
-    Welcome to our about us page to find all information about us
-</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{lf}}
+        <!-- <br>
+        <input type="text" name="username" placeholder="UserName">
+        <br>
+        <input type="password" name="password" placeholder="Password">
+        <br> -->
+        <input type="submit" value="save">
+    </form>
 {% endblock aboutusPage %}
